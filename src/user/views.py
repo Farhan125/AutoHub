@@ -1,7 +1,21 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, get_user_model
+from django.http import HttpResponse
 
-user = get_user_model()
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the user index.")
+
+
+def login(request):
+    return HttpResponse("User Login.")
+
+
+
+
+
+# # from django.shortcuts import render, redirect
+# # from django.contrib.auth import login, authenticate, get_user_model
+
+# user = get_user_model()
 # def register(request):
 #     if request.method == 'POST':
 #         form = CustomUserCreationForm(request.POST)
